@@ -21,11 +21,13 @@ VOLUME /app
 
 USER hassan
 
-COPY app.py /app
+COPY . ./
 
-COPY templates /app/templates
+#COPY app.py /app
 
-COPY attendance_files /app/attendance_files
+#COPY templates /app/templates
+
+#COPY attendance_files /app/attendance_files
 
 CMD ["flask", "run", "--host=0.0.0.0"]
 
